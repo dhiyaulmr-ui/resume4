@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Dhiya Ul Muthiya Rizqon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* --- CSS SECTION --- */
+        :root {
+            --primary-blue: #2c3e50;
+            --accent-blue: #34495e;
+            --sidebar-bg: #f8f9fa;
+            --text-main: #333;
+            --text-light: #666;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #e9ecef;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        .resume-card {
+            background: var(--white);
+            width: 100%;
+            max-width: 900px;
+            display: flex;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* Left Column */
+        .sidebar {
+            width: 35%;
+            background-color: var(--sidebar-bg);
+            padding: 40px 30px;
+            border-right: 1px solid #dee2e6;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--white);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 25px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .sidebar-section {
+            margin-bottom: 30px;
+        }
+
+        .sidebar-title {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+        }
+
+        .info-item i {
+            width: 25px;
+            color: var(--primary-blue);
+        }
+
+        /* Right Column */
+        .main-content {
+            width: 65%;
+            padding: 50px;
+        }
+
+        header {
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            line-height: 1.1;
+            margin-bottom: 10px;
+        }
+
+        .job-title {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            font-weight: 400;
+        }
+
+        .content-section {
+            margin-bottom: 35px;
+        }
+
+        .section-header {
+            font-size: 1.3rem;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .experience-item {
+            margin-bottom: 20px;
+        }
+
+        .exp-meta {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            color: #444;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .skill-bar {
+            background: #eee;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .print-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background: var(--primary-blue);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .print-btn:hover { background: #1a252f; }
+
+        @media print {
+            .print-btn { display: none; }
+            body { padding: 0; background: white; }
+            .resume-card { box-shadow: none; width: 100%; }
+        }
+
+        @media (max-width: 768px) {
+            .resume-card { flex-direction: column; }
+            .sidebar, .main-content { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <button class="print-btn" onclick="downloadResume()">
+        <i class="fas fa-download"></i> Download PDF
+    </button>
+
+    <div class="resume-card">
+        <aside class="sidebar">
+            <img src="profile.jpg" alt="Dhiya Ul Muthiya Rizqon" class="profile-img">
+            
+            <div class="sidebar-section">
+                <h2 class="sidebar-title">Contact</h2>
+                <div class="info-item">
+                    <i class="fas fa-id-badge"></i>
+                    <span>ID: 114014133</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>dhiya.rizqon@email.com</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+62 812-3456-7890</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-location-dot"></i>
+                    <span>Jakarta, Indonesia</span>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h2 class="sidebar-title">Education</h2>
+                <div class="experience-item">
+                    <p style="font-weight: bold; margin-bottom: 2px;">Dept. of Psychology</p>
+                    <p style="font-size: 0.85rem; color: var(--text-light);">University Name</p>
+                    <p style="font-size: 0.8rem; font-style: italic;">2022 - Present</p>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h2 class="sidebar-title">Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-bar">Counseling</div>
+                    <div class="skill-bar">Research</div>
+                    <div class="skill-bar">Public Speaking</div>
+                    <div class="skill-bar">Data Analysis</div>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header>
+                <h1>Dhiya Ul Muthiya Rizqon</h1>
+                <p class="job-title">Psychology Student | Researcher</p>
+            </header>
+
+            <section class="content-section">
+                <h2 class="section-header"><i class="fas fa-user"></i> About Me</h2>
+                <p>
+                    Dedicated and detail-oriented Psychology student with a strong interest in human behavior, 
+                    mental health advocacy, and organizational psychology. I am passionate about utilizing 
+                    psychological principles to improve community well-being and organizational efficiency.
+                </p>
+            </section>
+
+            <section class="content-section">
+                <h2 class="section-header"><i class="fas fa-briefcase"></i> Experience</h2>
+                <div class="experience-item">
+                    <div class="exp-meta">
+                        <span>Research Assistant</span>
+                        <span>2024 - Present</span>
+                    </div>
+                    <p style="font-style: italic; color: var(--text-light); margin-bottom: 5px;">University Lab</p>
+                    <ul style="margin-left: 20px; font-size: 0.95rem;">
+                        <li>Assisting in data collection for behavioral studies.</li>
+                        <li>Transcribing interviews and organizing qualitative data.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="exp-meta">
+                        <span>Student Organization Member</span>
+                        <span>2023 - 2024</span>
+                    </div>
+                    <p style="font-style: italic; color: var(--text-light); margin-bottom: 5px;">Psychology Student Union</p>
+                    <ul style="margin-left: 20px; font-size: 0.95rem;">
+                        <li>Coordinated mental health awareness seminars.</li>
+                        <li>Managed social media outreach for department events.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2 class="section-header"><i class="fas fa-certificate"></i> Projects</h2>
+                <div class="experience-item">
+                    <p style="font-weight: bold;">Community Mental Health Outreach</p>
+                    <p style="font-size: 0.95rem;">Developed a program to provide psychological first aid resources to local students during final exam periods.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        /* --- JAVASCRIPT SECTION --- */
+        function downloadResume() {
+            // This triggers the browser's print dialog
+            // Most modern browsers allow "Save as PDF" from here
+            window.print();
+        }
+
+        // Add a subtle entrance animation when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            const card = document.querySelector('.resume-card');
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'all 0.8s ease-out';
+            
+            setTimeout(() => {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }, 100);
+        });
+    </script>
+</body>
+</html>
